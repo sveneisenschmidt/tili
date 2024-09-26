@@ -7,6 +7,7 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/tili/',
   plugins: [vue(), vueJsx()],
   resolve: {
     alias: {
