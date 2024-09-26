@@ -1,0 +1,188 @@
+.footer {
+  @apply pt-12;
+
+  span {
+    @apply inline-block;
+
+    &:not(:last-child) {
+      @apply mr-4;
+    }
+  }
+
+  a {
+    @apply flex items-center justify-center;
+    @apply rounded-full;
+    @apply text-center text-3xl text-[var(--white)];
+    @apply size-20;
+    @apply cursor-pointer;
+
+    &.calculator {
+      @apply bg-[var(--yellow)];
+    }
+
+    &.words {
+      @apply bg-[var(--blue)];
+    }
+
+    &.settings {
+      @apply bg-[var(--red)];
+    }
+
+    &.reload {
+      @apply bg-[var(--green)];
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        @apply bg-[var(--black)];
+      }
+    }
+  }
+}
+
+.calculator {
+  @apply grid grid-cols-12;
+  @apply relative;
+
+  .settings {
+    @apply absolute;
+    @apply h-full w-full;
+    @apply bg-[var(--background)];
+
+    .settings-container {
+      @apply h-full w-full;
+      @apply bg-[var(--white)];
+      @apply rounded-[2em];
+      @apply p-10;
+
+      .heading {
+        @apply text-4xl text-[var(--black)];
+        @apply block;
+        @apply mb-6;
+      }
+
+      .options {
+        @apply grid grid-cols-12;
+        @apply gap-y-2;
+      }
+
+      .option-spacer {
+        @apply col-span-6;
+      }
+
+      .option-label {
+        @apply col-span-4;
+        @apply text-3xl text-[var(--black)];
+      }
+
+      .option-field {
+        @apply col-span-2;
+        @apply text-3xl text-[var(--black)];
+
+        * {
+          @apply cursor-pointer;
+        }
+
+        input {
+          -webkit-appearance: none;
+          -moz-appearance: textfield;
+          @apply w-full;
+        }
+      }
+    }
+  }
+
+  .screen {
+    border-color: var(--black);
+    @apply col-span-6;
+    @apply border-t-4;
+
+    .formula {
+      @apply h-1/2;
+      @apply text-right text-[5em];
+      @apply pt-0 pr-12;
+    }
+
+    .input-container {
+      @apply rounded-br-[6em] rounded-tl-[6em];
+      @apply flex justify-end;
+      @apply h-1/2;
+
+      input {
+        @apply bg-transparent;
+        @apply text-right text-[10em];
+        @apply pt-0 pr-12;
+      }
+
+      &.state-0 {
+        @apply text-[var(--yellow)];
+        @apply bg-[var(--white)];
+
+        input::placeholder {
+          @apply text-[var(--grey)];
+        }
+      }
+
+      &.state-1 {
+        @apply bg-[var(--green)];
+
+        input {
+          @apply text-[var(--white)];
+        }
+      }
+
+      &.state-2 {
+        @apply bg-[var(--red)];
+
+        input {
+          @apply text-[var(--white)];
+        }
+      }
+    }
+  }
+
+  .numpad {
+    @apply col-span-4 col-start-9;
+
+    .numpad-container {
+      @apply grid grid-cols-3;
+      @apply text-right;
+    }
+
+    div {
+      @apply gap-y-6;
+    }
+
+    button {
+      @apply text-5xl text-[var(--white)];
+      @apply bg-[var(--blue)];
+      @apply size-20;
+      @apply rounded-tr-[50%] rounded-bl-[50%];
+      @apply touch-manipulation !important;
+
+      @media (hover: hover) {
+        &:hover {
+          @apply bg-[var(--black)];
+        }
+      }
+    }
+
+    .remove {
+      @apply bg-[var(--red)];
+    }
+
+    .evaluate {
+      @apply bg-[var(--yellow)];
+    }
+
+    .locked {
+      @apply bg-[var(--white)];
+      @apply text-[var(--grey)];
+      @apply touch-none pointer-events-none;
+    }
+
+    .reload {
+      @apply bg-[var(--green)];
+    }
+  }
+}

@@ -1,0 +1,68 @@
+/* ./src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #f8f1e7;
+  --foreground: #272727;
+  --black: #272727;
+  --red: #e0473b;
+  --yellow: #f6ca45;
+  --green: #3f8f2b;
+  --grey: #efefef;
+  --blue: #2c61b8;
+  --white: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #272727;
+    --foreground: #f8f1e7;
+  }
+}
+
+@font-face {
+  font-family: 'BaumansRegular';
+  src: local('Baumans-Regular'), url('./fonts/Baumans-Regular.ttf');
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: BaumansRegular, sans-serif;
+  @apply h-screen flex  justify-center;
+}
+
+:root,
+body,
+* {
+  @apply touch-none !important;
+  @apply touch-manipulation !important;
+}
+
+@media (min-height: 540px) {
+  body {
+    @apply items-center align-middle;
+  }
+}
+
+#app {
+  width: 960px;
+  height: 540px;
+}
+
+*:focus {
+  outline: none;
+}
+
+@media (min-width: 1248px) {
+  #app {
+    @apply scale-125;
+  }
+}
+@media (min-width: 1536px) {
+  #app {
+    @apply scale-150;
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "settings": {
+    "headline": "Einstellungen",
+    "number_min": "Minimale Zahl",
+    "number_max": "Maximale Zahl",
+    "number_many": "Produkt von",
+    "addition": "Addition",
+    "subtraction": "Subtraktion"
+  }
+}
