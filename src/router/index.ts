@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import CaculatorView from '../views/CaculatorView.vue'
 import WordsView from '../views/WordsView.vue'
@@ -13,7 +13,7 @@ import WordsView from '../views/WordsView.vue'
  * @returns {Router} The configured router instance.
  */
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHashHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
