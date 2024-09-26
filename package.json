@@ -13,7 +13,8 @@
     "type-check": "vue-tsc --build --force",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "format": "prettier --write src/",
-    "serve": "serve dist/"
+    "serve": "serve dist/",
+    "publish": "npm run build; gh-pages -d dist"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.6.0",
@@ -48,6 +49,7 @@
     "autoprefixer": "^10.4.20",
     "eslint": "^8.57.0",
     "eslint-plugin-vue": "^9.23.0",
+    "gh-pages": "^6.1.1",
     "jsdom": "^24.1.0",
     "npm-run-all2": "^6.2.0",
     "postcss": "^8.4.47",
