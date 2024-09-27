@@ -5,10 +5,15 @@
 
 ## About
 
-Welcome to the math learning app **tili**! This open-source application is designed to help first graders learn addition and subtraction in a straight forward way. With customizable settings, you can tailor learning experience to meet each child's individual learning level.
+Welcome to the math learning app **tili**!
+
+This open-source application is designed to help first graders learn addition and subtraction in a straight forward way. With customizable settings, you can tailor learning experience to meet each child's individual learning level.
 
 <div align="center">
-    <img src="docs/screenshot.png" alt="Logo" width="512">
+    <a href="https://sveneisenschmidt.github.io/tili/" target="_blank">
+        <img src="docs/screenshot.png" alt="Logo" width="512">
+        <br/>Try it out here
+    </a> 
 </div>
 
 ### Features
